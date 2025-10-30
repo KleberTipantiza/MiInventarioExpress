@@ -6,3 +6,7 @@ mongoose.connect('mongodb://localhost:27017/miinventario', {
 })
 .then(()=> console.log('Conectado a MongoDB'))
 .catch(err => console.error('Error de conexión a MongoDB:', err));
+
+// Rutas
+const productoRouter = require('./routes/productos');
+app.use('/productos', productoRouter);
