@@ -7,13 +7,13 @@ Aplicación web de gestión de productos con autenticación y chat en tiempo rea
 # Estructura del Proyecto (MVC)
 
 MiInventarioExpress/ 
-├── index.js # Archivo principal del servidor 
-├── models/ # Esquemas de datos (Producto.js) 
-├── routes/ # Rutas de productos y autenticación 
-├── views/ # Vistas con Handlebars (.hbs) 
-├── public/ # Archivos estáticos (CSS) 
-├── uploads/ # Imágenes subidas por los usuarios 
-├── package.json # Dependencias y scripts
+- index.js # Archivo principal del servidor 
+- models/ # Esquemas de datos (Producto.js) 
+- routes/ # Rutas de productos y autenticación 
+- views/ # Vistas con Handlebars (.hbs) 
+- public/ # Archivos estáticos (CSS) 
+- uploads/ # Imágenes subidas por los usuarios 
+- package.json # Dependencias y scripts
 
 ---
 
