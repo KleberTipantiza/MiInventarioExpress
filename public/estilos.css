@@ -1,0 +1,213 @@
+/* ====== RESETEO Y CONFIGURACIÓN GLOBAL ====== */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f5f6fa;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ====== CABECERA Y NAVEGACIÓN ====== */
+header {
+  background-color: #004aad;
+  color: white;
+  text-align: center;
+  padding: 20px 0 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  color: #fff;
+  margin: 0 12px;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: background 0.3s;
+  font-weight: 500;
+}
+
+nav a:hover {
+  background-color: rgba(255,255,255,0.25);
+}
+
+/* ====== CONTENEDOR PRINCIPAL ====== */
+main {
+  flex: 1;
+  width: 100%;
+  max-width: 900px;
+  margin: 30px auto;
+  background: white;
+  padding: 25px 35px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+/* ====== TÍTULOS ====== */
+h2 {
+  text-align: center;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+/* ====== FORMULARIOS ====== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="password"],
+textarea,
+input[type="file"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+button, input[type="submit"] {
+  background-color: #004aad;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-size: 1rem;
+}
+
+button:hover, input[type="submit"]:hover {
+  background-color: #00347a;
+}
+
+/* ====== TABLAS ====== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  text-align: center;
+}
+
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #004aad;
+  color: white;
+}
+
+tr:hover {
+  background-color: #f0f6ff;
+}
+
+img {
+  border-radius: 6px;
+  max-width: 100px;
+}
+
+/* ====== ENLACES ====== */
+a {
+  color: #004aad;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ====== CHAT ====== */
+#mensajes {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+  max-height: 250px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fafafa;
+}
+
+#mensajes li {
+  background: #eef3ff;
+  margin: 6px;
+  padding: 8px 10px;
+  border-radius: 5px;
+}
+
+#mensaje {
+  width: 80%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Centrado del chat */
+input#mensaje, button[onclick="enviar()"] {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+/* ====== MENSAJES DE ERROR ====== */
+p[style*="color: red"], ul[style*="color:red;"] {
+  text-align: center;
+  background: #ffe6e6;
+  border: 1px solid #ffb3b3;
+  color: #d60000 !important;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+/* ====== PIE DE PÁGINA ====== */
+footer {
+  text-align: center;
+  background-color: #004aad;
+  color: white;
+  padding: 12px 0;
+  margin-top: auto;
+  font-size: 0.9rem;
+}
+
+/* ====== DISEÑO RESPONSIVO ====== */
+@media (max-width: 600px) {
+  main {
+    margin: 15px;
+    padding: 20px;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 5px;
+  }
+
+  input, textarea, button {
+    font-size: 0.95rem;
+  }
+}

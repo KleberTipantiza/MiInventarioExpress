@@ -1,0 +1,23 @@
+<input id="mensaje">
+<button onclick="enviar()">Enviar</button>
+<ul id="mensajes"></ul>
+
+<script src="/socket.io/socket.io.js"></script>
+
+<script>
+    const socket = io();
+    document.querySelector('button').onclick = () => {
+        const msgInput = document.getElementById('mensaje');
+        const msg = msgInput.value;
+        if(msg.trim() !== '') { // evitar enviar mensajes vacíos
+            socket.emit('mensaje', msg);
+            msgInput.value = ''; // limpia la barra de entrada
+        }
+    };
+
+    socket.on('mensaje', msg => {
+        const li = document.createElement('li');
+        li.textContent = msg;
+        document.getElementById('mensajes').appendChild(li);
+    });
+</script>

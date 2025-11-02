@@ -1,0 +1,26 @@
+<h2>Nuevo Producto</h2>
+
+{{#if errores}}
+    <ul style="color:red;">
+        {{#each errores}}
+            <li>{{this.msg}}</li>
+        {{/each}}
+    </ul>
+{{/if}}
+
+
+<form action="/productos" method="POST" enctype="multipart/form-data">
+    <label>Nombre:</label>
+    <input type="text" name="nombre" value="{{datos.nombre}}" required>
+
+    <label>Precio:</label>
+    <input type="number" name="precio" step="0.01" value="{{datos.precio}}" required>
+
+    <label>Descripcion:</label>
+    <textarea name="descripcion" required>{{datos.descripcion}}</textarea>
+
+    <label>Imagen:</label>
+    <input type="file" name="imagen" accept="image/*">
+
+    <button type="submit">Agregar Producto</button>
+</form>

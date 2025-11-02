@@ -1,0 +1,21 @@
+<h2>Editar Producto</h2>
+
+<form action="/productos/editar/{{producto._id}}" method="POST">
+    <label>Nombre:</label>
+    <input type="text" name="nombre" value="{{producto.nombre}}" required>
+
+    <label>Precio:</label>
+    <input type="number" name="precio" step="0.01" value="{{producto.precio}}" required>
+
+    <label>Descripcion:</label>
+    <textarea name="descripcion" required>{{producto.descripcion}}</textarea>
+
+    <p>Imagen actual:</p>
+    {{#if producto.imagen}}
+        <img src="/uploads/{{producto.imagen}}" alt="Imagen actual" width="100">
+    {{else}}
+        <p>No hay imagen disponible.</p>
+    {{/if}}
+
+    <button type="submit">Guardar Cambios</button>
+</form>
